@@ -9,16 +9,18 @@ function addKeyboardLayout(alphabet) {
 	return keyboard;
 }
 
-function getRandCharInRow(row) {
-	let keyboard = addKeyboardLayout(alphabet);
+function getRandCharInRow(row, addKeyboardLayout) {
 	let rowIndex = row - 1;
 	let elemIndex = Math.floor(Math.random() * keyboard[rowIndex].length);
 	return keyboard[rowIndex][elemIndex];
 }
 
 function getRandCharInAlph(keyboard) {
-	addKeyboardLayout(alphabet);
+	addKeyboardLayout(keyboard);
 	let rowIndex = Math.floor(Math.random() * keyboard.length) - 1;
 	let elemIndex = Math.floor(Math.random() * keyboard[rowIndex].length);
 	return keyboard[rowIndex][elemIndex];
 }
+
+getRandCharInRow(row)
+getRandCharInAlph(keyboard)
